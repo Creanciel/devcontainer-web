@@ -1,0 +1,30 @@
+{
+  "name": "Dev Container for Web",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "initializeCommand": [
+    "bash",
+    "-c",
+    "mkdir -p ${localEnv:HOME}/.claude && touch ${localEnv:HOME}/.claude.json"
+  ],
+  "mounts": [
+    "source=${localEnv:HOME}/.claude/,target=/home/development/.claude,type=bind",
+    "source=${localEnv:HOME}/.claude.json,target=/home/development/.claude.json,type=bind",
+    "source=${localWorkspaceFolder}/.devcontainer/settings.json,target=/home/development/.claude/settings.json,type=bind",
+    "source=${localWorkspaceFolder},target=/devcontainer_web,type=bind"
+  ],
+  "workspaceFolder": "/devcontainer_web",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.cwd": "/devcontainer_web",
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "anthropic.claude-code",
+        "VoidZero.vite-plus-extension-pack"
+      ]
+    }
+  }
+}
