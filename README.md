@@ -15,6 +15,8 @@ Claude + TypeScript 開発向け Dev Container
 
 ベースイメージは `ghcr.io/creanciel/devcontainer-web:latest`
 
+https://github.com/Creanciel/devcontainer-web/pkgs/container/devcontainer-web
+
 `docker/Dockerfile` をデプロイしたもの。自前でデプロイしてもらって構わない。
 
 Claude Code は頻繁に更新がかかるのでこちらで定義している。
