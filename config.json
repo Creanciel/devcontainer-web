@@ -1,0 +1,4 @@
+{
+  "entrypoint": "devcontainer_web.sh",
+  "project": "devcontainer-web"
+}
